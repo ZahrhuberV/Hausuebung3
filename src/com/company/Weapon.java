@@ -1,6 +1,6 @@
 package com.company;
 
-public class Weapons {
+public class Weapon {
     private String name;
     private CombatType combatType;
     private DamageTyp damageType;
@@ -9,7 +9,7 @@ public class Weapons {
     private int strength;
     private int value;
 
-    public Weapons(String name, CombatType combatType, DamageTyp damageType, int damage, int speed, int strength, int value) {
+    public Weapon(String name, CombatType combatType, DamageTyp damageType, int damage, int speed, int strength, int value) {
         this.name = name;
         this.combatType = combatType;
         this.damageType = damageType;
