@@ -15,7 +15,7 @@ public class MainAufgabe1 {
             e.printStackTrace();
         }
         //1.2
-        //mainAufgabe1.sortByDamage(weaponList);
+        mainAufgabe1.sortByDamage(weaponList);
         //1.3
         mainAufgabe1.sortByAlphabet(weaponList);
         //1.5
@@ -34,7 +34,6 @@ public class MainAufgabe1 {
         };
         printable2.print(weaponList);
 
-        // TODO 1.3 funktioniert noch nicht
         // TODO 1.6 mit + und |
     }
 
@@ -51,7 +50,7 @@ public class MainAufgabe1 {
                 }
                 return n.getDamageType().compareTo(m.getDamageType());
             }
-            return m.getCombatType().compareTo(n.getCombatType());
+            return n.getCombatType().compareTo(m.getCombatType());
         });
         return  weaponList;
     }
