@@ -23,18 +23,18 @@ public class MainAufgabe1 {
         printable1.print(weaponList);
         //1.6
         Printable printable2 = n -> {
-            System.out.printf("%15s %15s %15s %15s %15s %15s %15s", "Name", "CombatType", "DamageType", "Damage", "Speed", "Strength", "Value");
+            System.out.printf("%-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s", "Name", "|", "CombatType", "|", "DamageType", "|", "Damage", "|", "Speed", "|", "Strength", "|", "Value");
             System.out.println();
-            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+            System.out.printf("%-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s", "-------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "-----");
+            System.out.println();
             n.forEach(s -> {
-                System.out.format("%15s %15s %15s %15s %15s %15s %15s", s.getName(), s.getCombatType(), s.getDamageType(), s.getDamage(), s.getSpeed(), s.getStrength(), s.getValue());
+                System.out.format("%-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s %2s %-17s", s.getName(), "|", s.getCombatType(), "|", s.getDamageType(), "|", s.getDamage(), "|", s.getSpeed(), "|", s.getStrength(), "|", s.getValue());
                 System.out.println();
-                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+                System.out.printf("%-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s %1s %-17s", "------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "------------------", "+", "-----");
+                System.out.println();
             });
         };
         printable2.print(weaponList);
-
-        // TODO 1.6 mit + und |
     }
 
     public List<Weapon> sortByDamage(List<Weapon> weaponList) {
