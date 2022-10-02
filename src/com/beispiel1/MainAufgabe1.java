@@ -1,4 +1,4 @@
-package com.company;
+package com.beispiel1;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,7 +15,7 @@ public class MainAufgabe1 {
             e.printStackTrace();
         }
         //1.2
-        mainAufgabe1.sortByDamage(weaponList);
+        //mainAufgabe1.sortByDamage(weaponList);
         //1.3
         mainAufgabe1.sortByAlphabet(weaponList);
         //1.5
@@ -34,7 +34,8 @@ public class MainAufgabe1 {
         };
         printable2.print(weaponList);
 
-        //1.3 funktioniert noch nicht
+        // TODO 1.3 funktioniert noch nicht
+        // TODO 1.6 mit + und |
     }
 
     public List<Weapon> sortByDamage(List<Weapon> weaponList) {
@@ -44,13 +45,13 @@ public class MainAufgabe1 {
 
     public List<Weapon> sortByAlphabet(List<Weapon> weaponList) {
         weaponList.sort((n, m) -> {
-            if(n.getCombatType().equals(m.getCombatType())){
-                if(n.getDamageType().equals(m.getDamageType())){
+            if(n.getCombatType().compareTo(m.getCombatType()) == 0){
+                if(n.getDamageType().compareTo(m.getDamageType()) == 0){
                     return n.getName().compareTo(m.getName());
                 }
                 return n.getDamageType().compareTo(m.getDamageType());
             }
-            return n.getCombatType().compareTo(m.getCombatType());
+            return m.getCombatType().compareTo(n.getCombatType());
         });
         return  weaponList;
     }

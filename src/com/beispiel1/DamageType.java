@@ -1,5 +1,5 @@
-package com.company;
+package com.beispiel1;
 
-public enum DamageTyp {
+public enum DamageType {
     SLASHING, MISSILE, BLUNT, NONE, PIERCING
 }

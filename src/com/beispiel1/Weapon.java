@@ -1,15 +1,15 @@
-package com.company;
+package com.beispiel1;
 
 public class Weapon {
     private String name;
     private CombatType combatType;
-    private DamageTyp damageType;
+    private DamageType damageType;
     private int damage;
     private int speed;
     private int strength;
     private int value;
 
-    public Weapon(String name, CombatType combatType, DamageTyp damageType, int damage, int speed, int strength, int value) {
+    public Weapon(String name, CombatType combatType, DamageType damageType, int damage, int speed, int strength, int value) {
         this.name = name;
         this.combatType = combatType;
         this.damageType = damageType;
@@ -31,10 +31,10 @@ public class Weapon {
     public void setCombatType(CombatType combatType) {
         this.combatType = combatType;
     }
-    public DamageTyp getDamageType() {
+    public DamageType getDamageType() {
         return damageType;
     }
-    public void setDamageType(DamageTyp damageType) {
+    public void setDamageType(DamageType damageType) {
         this.damageType = damageType;
     }
     public int getDamage() {
@@ -65,5 +65,9 @@ public class Weapon {
     @Override
     public String toString() {
         return "Weapon: " + name + " CombatType: " + combatType + " DamageType: " + damageType + " Damage: " + damage + " Speed: " + speed + " Strength: " + strength + " Value: " + value + "\n";
+    }
+
+    public int getMinStrength() {
+        return strength;
     }
 }

@@ -1,4 +1,4 @@
-package com.company;
+package com.beispiel1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,18 +13,18 @@ class MainAufgabe1Test {
 
         List<Weapon> expected = new ArrayList<>();
         List<Weapon> result = new ArrayList<>();
-        result.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        result.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 10, 3, 5, 4250));
-        result.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        result.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 8, 3, 5, 4250));
-        result.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        result.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 19, 3, 5, 4250));
 
-        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 19, 3, 5, 4250));
-        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 10, 3, 5, 4250));
-        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
+        expected.add(new Weapon("weapon1", CombatType.MELEE, DamageType.MISSILE,
                 8, 3, 5, 4250));
 
         result = mainAufgabe1.sortByDamage(result);

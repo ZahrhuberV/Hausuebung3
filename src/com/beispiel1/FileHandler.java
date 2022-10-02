@@ -1,12 +1,10 @@
-package com.company;
+package com.beispiel1;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class FileHandler {
@@ -31,7 +29,7 @@ public class FileHandler {
                .map(n -> n.split(";"))
                .map(n -> new Weapon(n[0],
                        CombatType.valueOf(n[1]),
-                       DamageTyp.valueOf(n[2]),
+                       DamageType.valueOf(n[2]),
                        Integer.parseInt(n[3]),
                        Integer.parseInt(n[4]),
                        Integer.parseInt(n[5]),
