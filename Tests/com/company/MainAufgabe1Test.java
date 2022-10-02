@@ -5,11 +5,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class MainAufgabe1Test {
 
     @org.junit.jupiter.api.Test
     void sortByDamage() {
-        Main main = new Main();
+        MainAufgabe1 mainAufgabe1 = new MainAufgabe1();
 
         List<Weapon> expected = new ArrayList<>();
         List<Weapon> result = new ArrayList<>();
@@ -27,7 +27,7 @@ class MainTest {
         expected.add(new Weapon("weapon1", CombatType.MELEE, DamageTyp.MISSILE,
                 8, 3, 5, 4250));
 
-        result = main.sortByDamage(result);
+        result = mainAufgabe1.sortByDamage(result);
 
         assertEquals(result.toString(), expected.toString());
     }

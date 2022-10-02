@@ -1,16 +1,12 @@
 package com.company;
 
-import com.sun.security.jgss.GSSUtil;
-
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class Main {
+public class MainAufgabe1 {
 
     public static void main(String[] args) {
-        Main main = new Main();
+        MainAufgabe1 mainAufgabe1 = new MainAufgabe1();
         FileHandler fileHandler = new FileHandler();
         List<Weapon> weaponList = null;
         try {
@@ -19,13 +15,26 @@ public class Main {
             e.printStackTrace();
         }
         //1.2
-        main.sortByDamage(weaponList);
+        mainAufgabe1.sortByDamage(weaponList);
         //1.3
-        main.sortByAlphabet(weaponList);
+        mainAufgabe1.sortByAlphabet(weaponList);
         //1.5
         Printable printable1 = n -> System.out.println(n);
         printable1.print(weaponList);
-        //1.6 fehtl 1.3 funktioniert noch nicht
+        //1.6
+        Printable printable2 = n -> {
+            System.out.printf("%15s %15s %15s %15s %15s %15s %15s", "Name", "CombatType", "DamageType", "Damage", "Speed", "Strength", "Value");
+            System.out.println();
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+            n.forEach(s -> {
+                System.out.format("%15s %15s %15s %15s %15s %15s %15s", s.getName(), s.getCombatType(), s.getDamageType(), s.getDamage(), s.getSpeed(), s.getStrength(), s.getValue());
+                System.out.println();
+                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+            });
+        };
+        printable2.print(weaponList);
+
+        //1.3 funktioniert noch nicht
     }
 
     public List<Weapon> sortByDamage(List<Weapon> weaponList) {
